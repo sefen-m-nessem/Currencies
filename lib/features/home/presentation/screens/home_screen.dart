@@ -8,17 +8,14 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SectionText(text: 'Directions'),
-          ExtchangeSection(),
-          SectionText(text: 'Explore'),
-          Expanded(child: ExploreSection()),
-        ],
-      ),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        SectionText(text: 'Directions'),
+        ExtchangeSection(),
+        SectionText(text: 'Explore'),
+        Expanded(child: ExploreSection()),
+      ],
     );
   }
 }

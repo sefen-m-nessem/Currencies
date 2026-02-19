@@ -84,4 +84,16 @@ class ApiConst {
       "icon": "https://currencyfreaks.com/photos/flags/xag.png",
     },
   };
+
+  static String buildFinanceSearchUrl(String query) {
+    final financeFilter =
+        '$query AND (stock OR forex OR crypto OR finance OR economy OR market)';
+
+    return 'https://newsdata.io/api/1/latest'
+        '?apikey=YOUR_KEY'
+        '&q=${Uri.encodeComponent(financeFilter)}'
+        '&category=business'
+        '&language=en'
+        '&removeduplicate=1';
+  }
 }

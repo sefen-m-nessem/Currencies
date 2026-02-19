@@ -19,9 +19,12 @@ class ShellScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomSafeArea(
       child: Scaffold(
-        body: IndexedStack(
-          index: context.watch<ShellCubit>().state,
-          children: screens,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: IndexedStack(
+            index: context.watch<ShellCubit>().state,
+            children: screens,
+          ),
         ),
         bottomNavigationBar: CustomBottomNavBar(),
       ),
